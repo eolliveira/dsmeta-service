@@ -1,9 +1,11 @@
 package com.example.dsmetaservice.dto;
 
+import com.example.dsmetaservice.entities.Sale;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
@@ -12,9 +14,18 @@ import java.util.Date;
 public class SaleDTO {
 
     private Long id;
-    private String seller_name;
-    private Double visited;
-    private Double deals;
+    private String sellerName;
+    private Integer visited;
+    private Integer deals;
     private Double amount;
-    private Date date;
+    private LocalDate date;
+
+    public SaleDTO(Sale p) {
+        this.id = p.getId();
+        this.sellerName = p.getSellerName();
+        this.visited = p.getVisited();
+        this.amount = p.getAmount();
+        this.date = p.getDate();
+
+    }
 }

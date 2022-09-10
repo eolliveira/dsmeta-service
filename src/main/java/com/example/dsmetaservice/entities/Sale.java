@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
@@ -19,5 +20,5 @@ public class Sale {
     private Integer visited;
     private Integer deals;
     private Double amount;
-    private Date date;
+    private LocalDate date;
 }
