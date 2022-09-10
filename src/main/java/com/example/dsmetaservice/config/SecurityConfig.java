@@ -1,4 +1,4 @@
-package config;
+package com.example.dsmetaservice.config;
 
 import java.util.Arrays;
 
